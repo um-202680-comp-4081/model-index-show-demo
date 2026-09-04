@@ -1,0 +1,7 @@
+<h1>Browse Cleaners</h1>
+
+<ul>
+  <% @cleaners.each do |c| %>
+    <li><%= link_to "#{c.brand} #{c.name}", cleaner_path(c) %></li>
+  <% end %>
+</ul>

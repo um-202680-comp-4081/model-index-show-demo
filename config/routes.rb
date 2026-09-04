@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  root to: redirect("/cleaners")
+
+  get "/cleaners", to: "cleaners#index", as: "cleaners"
+  get "/cleaners/:id", to: "cleaners#show", as: "cleaner"
 end
